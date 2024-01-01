@@ -75,3 +75,12 @@ If the open list is empty, and the goal is not reached, there is no path.
 
 -----------------------------------------------------------------------
 
+## Considerations
+- A* is complete and optimal when using an admissible heuristic.
+- The algorithm may not perform optimally in certain scenarios, such as environments with very high-dimensional state spaces.
+- Choosing an appropriate heuristic is crucial for the efficiency of the algorithm.
+- A* is widely used and has many variations and optimizations, such as weighted A* and incremental search.
+- In summary, A* combines the benefits of both uniform cost search and greedy best-first search by using a heuristic function to efficiently explore the search space and find the shortest path. Its flexibility and effectiveness make it a popular choice for pathfinding applications.
+
+-----------------------------------------------------------------------
+
