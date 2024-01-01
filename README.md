@@ -17,13 +17,17 @@
   <img align="left" alt="C++ Template" src="https://img.shields.io/badge/Algorithm%20Implementation-black?style=for-the-badge&logo=cpp&logoColor=white&color=black&labelColor=black"> </a>
   
 <a href="https://choosealicense.com/licenses/mit/"> 
-  <img align="right" alt="License" src="https://img.shields.io/badge/License%20:%20Unlicense-black?style=for-the-badge&logo=unlicense&logoColor=white&color=black&labelColor=black"> </a>
+  <img align="right" alt="License" src="https://img.shields.io/badge/License%20:%20MIT-black?style=for-the-badge&logo=mit&logoColor=white&color=black&labelColor=black"> </a>
   
 <br></br>
 
 -----------------------------------------------------------------------
 ## Overview
 The A* (A-star) algorithm is a popular pathfinding algorithm commonly used in robotics, games, and other applications where finding the shortest path between two points is necessary. A* is an extension of Dijkstra's algorithm with the added benefit of heuristic evaluation, making it more efficient for pathfinding in many cases.
+The effectiveness of A* heavily relies on the quality of this heuristic function -
+A good heuristic should be admissible (never overestimate the cost) to guarantee the optimality of the solution.
+
+Common heuristics include Manhattan distance, Euclidean distance, and Chebyshev distance, which can be interchanged depending on the nature of the environment.
 
 #### Objective: 
 Find the shortest path from a starting point to a goal point in a graph (or grid).
@@ -50,29 +54,30 @@ A* uses a heuristic function to estimate the cost from the current node to the g
 
 ## Algorithm Steps
 
-Initialization:
+#### Initialization:
 
 Create the start node and add it to the open list (priority queue).
 Initialize g and h values of the start node.
 Set g to 0 for the start node.
-Main Loop:
+
+#### Main Loop:
 
 While the open list is not empty:
 Pop the node with the lowest f value from the open list.
 If the current node is the goal, the path is found.
-Generate Successors:
+
+#### Generate Successors:
 
 For each neighboring node (successor) of the current node:
 Calculate g and h values for the successor.
 If the successor is not in the open list, calculate f and add it to the open list.
 If the successor is in the open list and the new g value is lower, update g and f.
-Termination:
+
+#### Termination:
 
 If the open list is empty, and the goal is not reached, there is no path.
-Heuristic Function:
-The effectiveness of A* heavily relies on the quality of the heuristic function.
-A good heuristic should be admissible (never overestimate the cost) to guarantee the optimality of the solution.
-Common heuristics include Manhattan distance, Euclidean distance, and Chebyshev distance, depending on the nature of the environment.
+
+
 
 
 -----------------------------------------------------------------------
