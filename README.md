@@ -1,4 +1,4 @@
-![image]()
+![image](https://upload.wikimedia.org/wikipedia/commons/9/98/AstarExampleEn.gif)
 
 # Repository Template
 
