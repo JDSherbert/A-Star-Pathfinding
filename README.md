@@ -124,23 +124,23 @@ A* uses a heuristic function to estimate the cost from the current node to the g
 
 ## Algorithm Steps
 
-#### Initialization:
+#### 1. Initialization
 Create the start node and add it to the open list (priority queue).
 Initialize g and h values of the start node.
 Set g to 0 for the start node.
 
-#### Main Loop:
+#### 2. Main Loop
 While the open list is not empty:
 Pop the node with the lowest f value from the open list.
 If the current node is the goal, the path is found.
 
-#### Generate Successors:
+#### 3. Generate Successors
 For each neighboring node (successor) of the current node:
 Calculate g and h values for the successor.
 If the successor is not in the open list, calculate f and add it to the open list.
 If the successor is in the open list and the new g value is lower, update g and f.
 
-#### Termination:
+#### 4. Termination
 If the open list is empty, and the goal is not reached, there is no path.
 
 -----------------------------------------------------------------------
