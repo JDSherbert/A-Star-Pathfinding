@@ -58,7 +58,7 @@ For two points, x and y, the distance is given by:
 
 Suitable for continuous environments where diagonal movement is allowed and the cost of diagonal movement is considered equal to the cost of horizontal or vertical movement.
 
-### 3. Chebyshev Distance:
+### 3. Chebyshev Distance
 Definition: Also known as the L∞ norm or chessboard distance, Chebyshev distance is the maximum of the absolute differences along each coordinate axis.
 
 #### Formula 
@@ -71,7 +71,7 @@ Particularly useful in grid-based environments where diagonal movement is allowe
 
 -----------------------------------------------------------------------
 
-## Comparisons:
+## Comparisons
 
 ### Manhattan vs. Euclidean
 Manhattan distance is faster to compute because it involves only absolute differences and additions.
