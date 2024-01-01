@@ -94,12 +94,14 @@ In summary, the selection of the appropriate distance measure depends on the spe
 
 -----------------------------------------------------------------------
 
-## A* Pathfinder Objective
+## A* Pathfinder Function
 
-Find the shortest path from a starting point to a goal point in a graph (or grid).
+The objective of the pathfidner is to quite literally find the shortest path from a starting point to a goal point in a graph (or grid).
 A* uses a priority queue to efficiently select the node with the lowest total cost from the start to the current node, considering both the cost to reach the current node (g value) and the estimated cost to reach the goal from the current node (h value).
 
-### Key Components
+-----------------------------------------------------------------------
+
+## Key Components
 
 #### Nodes (or Cells): 
 The graph is made up of nodes representing positions in the environment. Each node has coordinates, and in a grid-based scenario, nodes correspond to grid cells.
@@ -116,7 +118,9 @@ Define the connections between nodes. In a grid, nodes are typically connected t
 #### Heuristic Function: 
 A* uses a heuristic function to estimate the cost from the current node to the goal. This function should be admissible (never overestimates) to guarantee the optimality of the solution.
 
-### Algorithm Steps
+-----------------------------------------------------------------------
+
+## Algorithm Steps
 
 #### Initialization:
 Create the start node and add it to the open list (priority queue).
