@@ -29,15 +29,15 @@ A good heuristic should be admissible (never overestimate the cost) to guarantee
 
 Common heuristics include Manhattan distance, Euclidean distance, and Chebyshev distance, which can be interchanged depending on the nature of the environment.
 
-#### Objective: 
+#### Objective:
 Find the shortest path from a starting point to a goal point in a graph (or grid).
 
-#### Data Structure: 
+#### Data Structure:
 A* uses a priority queue to efficiently select the node with the lowest total cost from the start to the current node, considering both the cost to reach the current node (g value) and the estimated cost to reach the goal from the current node (h value).
 
 ## Key Components
 
-##### Nodes (or Cells): 
+#### Nodes (or Cells): 
 The graph is made up of nodes representing positions in the environment. Each node has coordinates, and in a grid-based scenario, nodes correspond to grid cells.
 
 #### Edges (or Connections): 
@@ -55,30 +55,23 @@ A* uses a heuristic function to estimate the cost from the current node to the g
 ## Algorithm Steps
 
 #### Initialization:
-
 Create the start node and add it to the open list (priority queue).
 Initialize g and h values of the start node.
 Set g to 0 for the start node.
 
 #### Main Loop:
-
 While the open list is not empty:
 Pop the node with the lowest f value from the open list.
 If the current node is the goal, the path is found.
 
 #### Generate Successors:
-
 For each neighboring node (successor) of the current node:
 Calculate g and h values for the successor.
 If the successor is not in the open list, calculate f and add it to the open list.
 If the successor is in the open list and the new g value is lower, update g and f.
 
 #### Termination:
-
 If the open list is empty, and the goal is not reached, there is no path.
-
-
-
 
 -----------------------------------------------------------------------
 
