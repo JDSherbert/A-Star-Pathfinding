@@ -41,7 +41,7 @@ Also known as the L1 norm or taxicab distance, Manhattan distance is the sum of 
 #### Formula 
 For two points, x and y, the distance is given by:
 ```latex
-\text{Manhattan Distance} = |x_1 - x_2| + |y_1 - y_2|
+Manhattan Distance = |x_1 - x_2| + |y_1 - y_2|
 ```
 
 It's ideal for grid-based environments where movement is restricted to horizontal, vertical, and diagonal directions with equal cost.
@@ -53,7 +53,7 @@ It represents the length of the shortest path between the points.
 #### Formula 
 For two points, x and y, the distance is given by:
 ```latex
-\text{Euclidean Distance} = \sqrt{{(x_1 - x_2)^2 + (y_1 - y_2)^2}}
+Euclidean Distance = \sqrt{{(x_1 - x_2)^2 + (y_1 - y_2)^2}}
 ```
 
 Suitable for continuous environments where diagonal movement is allowed and the cost of diagonal movement is considered equal to the cost of horizontal or vertical movement.
@@ -64,7 +64,7 @@ Definition: Also known as the L∞ norm or chessboard distance, Chebyshev distan
 #### Formula 
 For two points, x and y, the distance is given by:
 ```latex
-\text{Chebyshev Distance} = \max(|x_1 - x_2|, |y_1 - y_2|)
+Chebyshev Distance = \max(|x_1 - x_2|, |y_1 - y_2|)
 ```
 
 Particularly useful in grid-based environments where diagonal movement is allowed, and the cost of diagonal movement is the same as the cost of horizontal or vertical movement.
