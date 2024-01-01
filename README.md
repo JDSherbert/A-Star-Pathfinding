@@ -27,15 +27,79 @@ The A* (A-star) algorithm is a popular pathfinding algorithm commonly used in ro
 The effectiveness of A* heavily relies on the quality of this heuristic function -
 A good heuristic should be admissible (never overestimate the cost) to guarantee the optimality of the solution.
 
+
+
+-----------------------------------------------------------------------
+
+## Common Heuristics
+
 Common heuristics include Manhattan distance, Euclidean distance, and Chebyshev distance, which can be interchanged depending on the nature of the environment.
 
-#### Objective:
-Find the shortest path from a starting point to a goal point in a graph (or grid).
+### 1. Manhattan Distance
+Also known as the L1 norm or taxicab distance, Manhattan distance is the sum of the absolute differences of the Cartesian coordinates. It measures the distance between two points along the grid lines.
 
-#### Data Structure:
+#### Formula 
+For two points, x and y, the distance is given by:
+```latex
+\text{Manhattan Distance} = |x_1 - x_2| + |y_1 - y_2|
+```
+
+It's ideal for grid-based environments where movement is restricted to horizontal, vertical, and diagonal directions with equal cost.
+
+### 2. Euclidean Distance
+Also known as the L2 norm, Euclidean distance is the straight-line distance between two points in Euclidean space. 
+It represents the length of the shortest path between the points.
+
+#### Formula 
+For two points, x and y, the distance is given by:
+```latex
+\text{Euclidean Distance} = \sqrt{{(x_1 - x_2)^2 + (y_1 - y_2)^2}}
+```
+
+Suitable for continuous environments where diagonal movement is allowed and the cost of diagonal movement is considered equal to the cost of horizontal or vertical movement.
+
+### 3. Chebyshev Distance:
+Definition: Also known as the L∞ norm or chessboard distance, Chebyshev distance is the maximum of the absolute differences along each coordinate axis.
+
+#### Formula 
+For two points, x and y, the distance is given by:
+```latex
+\text{Chebyshev Distance} = \max(|x_1 - x_2|, |y_1 - y_2|)
+```
+
+Particularly useful in grid-based environments where diagonal movement is allowed, and the cost of diagonal movement is the same as the cost of horizontal or vertical movement.
+
+### Comparisons:
+
+#### Manhattan vs. Euclidean
+Manhattan distance is faster to compute because it involves only absolute differences and additions.
+Euclidean distance provides a more accurate measure when diagonal movement is allowed, as it calculates the true straight-line distance.
+
+#### Euclidean vs. Chebyshev
+Euclidean distance considers the actual geometric distance, while Chebyshev distance only considers the maximum coordinate difference.
+Chebyshev distance is less computationally intensive than Euclidean distance.
+
+#### Manhattan vs. Chebyshev:
+In grid-based environments with only horizontal, vertical, and diagonal movement, Manhattan and Chebyshev distances are often equivalent.
+Chebyshev distance is more general and can be applied in scenarios where diagonal movement is allowed.
+
+-----------------------------------------------------------------------
+
+## Choosing a Heuristic
+
+The choice of heuristic depends on the characteristics of the environment and the allowed types of movement.
+If diagonal movement is restricted or has a different cost, Manhattan distance is often a good choice.
+For scenarios with diagonal movement and equal cost, Euclidean or Chebyshev distance can be considered based on computational efficiency.
+In summary, the selection of the appropriate distance measure depends on the specific characteristics of the environment and the movement constraints. Each distance metric has its strengths and is suitable for different scenarios within the context of pathfinding algorithms like A*.
+
+-----------------------------------------------------------------------
+
+## A* Pathfinder Objective
+
+Find the shortest path from a starting point to a goal point in a graph (or grid).
 A* uses a priority queue to efficiently select the node with the lowest total cost from the start to the current node, considering both the cost to reach the current node (g value) and the estimated cost to reach the goal from the current node (h value).
 
-## Key Components
+### Key Components
 
 #### Nodes (or Cells): 
 The graph is made up of nodes representing positions in the environment. Each node has coordinates, and in a grid-based scenario, nodes correspond to grid cells.
@@ -52,7 +116,7 @@ Define the connections between nodes. In a grid, nodes are typically connected t
 #### Heuristic Function: 
 A* uses a heuristic function to estimate the cost from the current node to the goal. This function should be admissible (never overestimates) to guarantee the optimality of the solution.
 
-## Algorithm Steps
+### Algorithm Steps
 
 #### Initialization:
 Create the start node and add it to the open list (priority queue).
