@@ -81,7 +81,7 @@ Euclidean distance provides a more accurate measure when diagonal movement is al
 Euclidean distance considers the actual geometric distance, while Chebyshev distance only considers the maximum coordinate difference.
 Chebyshev distance is less computationally intensive than Euclidean distance.
 
-### Manhattan vs. Chebyshev:
+### Manhattan vs. Chebyshev
 In grid-based environments with only horizontal, vertical, and diagonal movement, Manhattan and Chebyshev distances are often equivalent.
 Chebyshev distance is more general and can be applied in scenarios where diagonal movement is allowed.
 
