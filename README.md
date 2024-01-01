@@ -22,12 +22,12 @@
 <br></br>
 
 -----------------------------------------------------------------------
+
 ## Overview
+
 The A* (A-star) algorithm is a popular pathfinding algorithm commonly used in robotics, games, and other applications where finding the shortest path between two points is necessary. A* is an extension of Dijkstra's algorithm with the added benefit of heuristic evaluation, making it more efficient for pathfinding in many cases.
 The effectiveness of A* heavily relies on the quality of this heuristic function -
 A good heuristic should be admissible (never overestimate the cost) to guarantee the optimality of the solution.
-
-
 
 -----------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ Also known as the L1 norm or taxicab distance, Manhattan distance is the sum of 
 #### Formula 
 For two points, x and y, the distance is given by:
 ```latex
-Manhattan Distance = |x_1 - x_2| + |y_1 - y_2|
+\text{Manhattan Distance} = |x_1 - x_2| + |y_1 - y_2|
 ```
 
 It's ideal for grid-based environments where movement is restricted to horizontal, vertical, and diagonal directions with equal cost.
@@ -53,7 +53,7 @@ It represents the length of the shortest path between the points.
 #### Formula 
 For two points, x and y, the distance is given by:
 ```latex
-Euclidean Distance = \sqrt{{(x_1 - x_2)^2 + (y_1 - y_2)^2}}
+\text{Euclidean Distance} = \sqrt{{(x_1 - x_2)^2 + (y_1 - y_2)^2}}
 ```
 
 Suitable for continuous environments where diagonal movement is allowed and the cost of diagonal movement is considered equal to the cost of horizontal or vertical movement.
@@ -64,22 +64,24 @@ Definition: Also known as the L∞ norm or chessboard distance, Chebyshev distan
 #### Formula 
 For two points, x and y, the distance is given by:
 ```latex
-Chebyshev Distance = \max(|x_1 - x_2|, |y_1 - y_2|)
+\text{Chebyshev Distance} = \max(|x_1 - x_2|, |y_1 - y_2|)
 ```
 
 Particularly useful in grid-based environments where diagonal movement is allowed, and the cost of diagonal movement is the same as the cost of horizontal or vertical movement.
 
-### Comparisons:
+-----------------------------------------------------------------------
 
-#### Manhattan vs. Euclidean
+## Comparisons:
+
+### Manhattan vs. Euclidean
 Manhattan distance is faster to compute because it involves only absolute differences and additions.
 Euclidean distance provides a more accurate measure when diagonal movement is allowed, as it calculates the true straight-line distance.
 
-#### Euclidean vs. Chebyshev
+### Euclidean vs. Chebyshev
 Euclidean distance considers the actual geometric distance, while Chebyshev distance only considers the maximum coordinate difference.
 Chebyshev distance is less computationally intensive than Euclidean distance.
 
-#### Manhattan vs. Chebyshev:
+### Manhattan vs. Chebyshev:
 In grid-based environments with only horizontal, vertical, and diagonal movement, Manhattan and Chebyshev distances are often equivalent.
 Chebyshev distance is more general and can be applied in scenarios where diagonal movement is allowed.
 
@@ -103,19 +105,19 @@ A* uses a priority queue to efficiently select the node with the lowest total co
 
 ## Key Components
 
-#### Nodes (or Cells): 
+#### Nodes (or Cells)
 The graph is made up of nodes representing positions in the environment. Each node has coordinates, and in a grid-based scenario, nodes correspond to grid cells.
 
-#### Edges (or Connections): 
+#### Edges (or Connections)
 Define the connections between nodes. In a grid, nodes are typically connected to their adjacent neighbors.
 
-#### Costs:
+#### Costs
 - g (Cost from Start): The cost to reach a node from the start node.
 - h (Heuristic Cost to Goal): An estimate of the cost from the current node to the goal. It is the heuristic function's role to provide this estimate.
 - f (Total Cost): The sum of g and h. This is the value used to prioritize nodes in the priority queue.
 - Priority Queue: Nodes are stored in a priority queue sorted by their f values. This ensures that nodes with lower total costs are explored first.
 
-#### Heuristic Function: 
+#### Heuristic Function 
 A* uses a heuristic function to estimate the cost from the current node to the goal. This function should be admissible (never overestimates) to guarantee the optimality of the solution.
 
 -----------------------------------------------------------------------
