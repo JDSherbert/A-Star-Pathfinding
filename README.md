@@ -1,6 +1,6 @@
 ![image](https://upload.wikimedia.org/wikipedia/commons/9/98/AstarExampleEn.gif)
 
-# Repository Template
+# A* Pathfinding
 
 <!-- Header Start -->
 <a href = "https://learn.microsoft.com/en-us/cpp/cpp-language"> <img height="40" img width="40" src="https://cdn.simpleicons.org/c++"> </a>
