@@ -29,6 +29,13 @@ The A* (A-star) algorithm is a popular pathfinding algorithm commonly used in ro
 The effectiveness of A* heavily relies on the quality of this heuristic function -
 A good heuristic should be admissible (never overestimate the cost) to get the best possible solution.
 
+#### Running The Example Code
+You should be able to run the example code above with this command:
+```cpp
+g++ main.cpp Pathfinder.cpp -o pathfinder
+./pathfinder
+```
+
 -----------------------------------------------------------------------
 
 ## Common Heuristics
