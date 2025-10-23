@@ -17,7 +17,7 @@ struct Node
 };
 
 // Finds a path from start to goal using the A* algorithm.
-// `graph` should be a 2D grid where 0 = walkable, 1 = blocked.
+// @graph should be a 2D grid where 0 = walkable, 1 = blocked.
 std::vector<Node> FindPath(const std::vector<std::vector<int>>& graph, const Node& start, const Node& goal);
 
 // Function to print the path
